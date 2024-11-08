@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "future-makers-extension",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "description": "Project for ALLaM Challenge",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -12,11 +12,8 @@
   },
   "author": "",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
-  },
   "dependencies": {
+    "ky": "^1.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

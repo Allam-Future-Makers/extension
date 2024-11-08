@@ -1,9 +1,16 @@
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
-  if (msg.color) {
-    console.log("Receive color = " + msg.color);
-    document.body.style.backgroundColor = msg.color;
-    sendResponse("Change color to " + msg.color);
-  } else {
-    sendResponse("Color message is none.");
-  }
-});
+import React from "react";
+import App from "./App";
+import { createRoot } from "react-dom/client";
+
+console.log("entor");
+
+// Check if the container already exists, if not, create and inject it
+let appContainer = document.getElementById("aqsa");
+if (!appContainer) {
+  appContainer = document.createElement("div");
+  appContainer.id = "aqsa";
+  document.body.appendChild(appContainer);
+}
+
+const root = createRoot(appContainer); // createRoot(container!) if you use TypeScript
+root.render(<App />);
